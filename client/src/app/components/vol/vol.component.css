@@ -1,0 +1,22 @@
+.card1 {
+    width: 40%;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+}
+
+.conseil {
+    color: #E26F05;
+    font-weight: bold;
+}
+
+.labelcss {
+    font-size: large;
+    color: #6A6767;
+    font-weight: bold;
+}
+
+.back {
+    background-image: url("../../../assets/welcome.png");
+    background-repeat: no-repeat;
+}

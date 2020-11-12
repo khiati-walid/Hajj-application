@@ -1,0 +1,31 @@
+<div class="div1" *ngIf="customer">
+
+    <div class="div2">
+        <p>Vol:</p> <button class="btn1" (click)="showbuuton()">Voi_plus</button></div>
+    <div class="div3" *ngIf="show" id="myDIV">
+        <div>
+            <label>Date de départ:</label> {{customer.datedepart}}
+        </div>
+        <div>
+            <label>Date de d'arrivée</label> {{customer.datedarrive}}
+        </div>
+        <div><label>Lieu de départ:</label></div>{{customer.lieudepart}}
+
+        <div><label>Agence de voyage:</label></div>{{customer.agance}}
+
+        <div><label>Avion:</label></div>{{customer.avion}}
+
+        <div><label>Lieu de d'arrivée:</label></div>{{customer.lieudarrive}}
+        <br>
+        <button class="btn2">Reserver</button>
+        <br>
+        <br>
+
+
+
+
+        <hr/>
+    </div>
+</div>
+
+<br>

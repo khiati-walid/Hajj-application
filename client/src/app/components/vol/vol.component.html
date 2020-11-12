@@ -1,0 +1,41 @@
+<div class="global-container">
+  <div class="card">
+    <div class="card-body back">
+      <h3 class="card-title text-center conseil"><img src="assets/ajoutvol.png" style="width: 50%"></h3>
+        <form class="card1"  [formGroup]="Myform " (ngSubmit)="onSubmit()">
+          <div class="form-group labelcss">
+            <label  for="num" >Numero de vol</label>
+            <input type="number" class="form-control" id="num" formControlName="num">
+          </div>
+          <div class="form-group labelcss">
+            <label for="depart">Date de depart</label>
+            <input type="text" formControlName="depart" class="form-control" id="depart">
+          </div>
+          <div class="form-group labelcss">
+            <label for="arrive">Date arrivée</label>
+              <input type="text" formControlName="arrive" class="form-control" id="arrive">
+          </div>
+          <div class="form-group labelcss">
+            <label for="lieuDepart">Lieu depart</label>
+            <input type="text" formControlName="lieuDepart" class="form-control" id="lieuDepart">
+          </div>
+          <div class="form-group labelcss">
+            <label for="lieuArrive">Lieu d'arrivee</label>
+            <input type="text" formControlName="lieuArrive" class="form-control" id="lieuArrive">
+          </div>
+          <div class="form-group labelcss">
+            <label for="agence">Agence de voyage</label>
+            <input type="text" formControlName="agence" class="form-control" id="agence">
+          </div>
+          <div class="form-group labelcss">
+            <label for="avion">Avion</label>
+            <input type="text" formControlName="avion" class="form-control" id="avion">
+          </div>
+
+          <button type="submit" class="btn  btn-block"style="background-color: #047323;color: white; border-radius: 30px; font-size: x-large">Ajouter</button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+

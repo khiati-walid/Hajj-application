@@ -1,0 +1,44 @@
+<div class="row">
+  <div class="col-lg-8 col-sm-8 ">
+
+	<div class="card login-form card3">
+    <div class="card-body">
+		<h3 class="card-title text-center panel">Login Admin</h3>
+		<div class="card-text">
+			<div class="alert alert-danger alert-dismissible fade show" role="alert" *ngIf="isLoginFailed" >Incorrect username or password.</div>
+			<form class="labelcss" [formGroup]="form" (ngSubmit)="onSubmit() ">
+				<div class="form-group">
+					<label for="email">Email address</label>
+					<input type="email" class="form-control" id="email" formControlName="email"
+                    [ngClass]="{ 'is-invalid': isLoggedIn && f.email?.errors }" aria-describedby="emailHelp">
+                    <div *ngIf="isLoggedIn&& f.email?.errors" class="text-danger">
+                        <div *ngIf="f.email?.errors.required">Email is required</div>
+                    </div>
+				</div>
+				<div class="form-group">
+					<label for="password">Password</label>
+                    <input type="password" formControlName="password" class="form-control" id="password"
+                    [ngClass]="{ 'is-invalid': isLoggedIn  && f.password?.errors }" >
+                    <div *ngIf="isLoggedIn  && f.password?.errors" class="text-danger">
+                        <div *ngIf="f.password?.errors.required">Password is required</div>
+                    </div>
+				</div>
+				<button type="submit" class="btn btn-block"style="background-color: #047323;color: white; border-radius: 30px; font-size:x-large">Login</button>
+			</form>
+
+		</div>
+	</div>
+</div>
+
+      <div>
+
+  </div>
+</div>
+  <div class="col-lg-4 col-sm-4 ">
+    <img src="assets/welcome.png"  >
+  </div>
+
+</div>
+
+
+

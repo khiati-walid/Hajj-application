@@ -1,0 +1,119 @@
+<div>
+  <h1 class="text-xl-center">Liste des participants</h1>
+
+  <div class="inputcss">
+    <label for="nb">Nombre des participants de tirage</label>
+    <input type="number" class="form-control"  [formControl]="nmbrParticipant" id="nb">
+    <label for="nb">Nombre des participants de filtrage</label>
+    <input type="number" class="form-control" [formControl]="nmbrfiltrage" id="nbfiltrage">
+    <label for="nb">Age</label>
+    <input type="number" class="form-control" [formControl]="age"  id="age">
+  </div>
+  <hr>
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">#ID</th>
+      <th scope="col">No passport</th>
+      <th scope="col">Prénom & Nom</th>
+      <th scope="col">Nb participation</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of itemsArray">
+      <th>{{ item.id }}</th>
+      <td>{{ item.numPassport }}</td>
+      <td>{{ item.firstName}} {{item.familyName}}</td>
+      <td>{{ item.nbInscription}}</td>
+      <td>
+        <button type="button" class="btn btn-danger" >supprimer</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <!-- Trigger the modal with a button -->
+  <div style="display: flex">
+  <button type="button" name="button" class="btn tirage_btn" data-toggle="modal"  data-target="#exampleModal"(click)="tirage()">Tirage</button>
+
+  <button type="button" name="button" class="btn tirage_btn" data-toggle="modal"  data-target="#exampleModal1"(click)="filtrage()">Filtrage</button>
+  </div>
+  <!-- Modal -->
+  <!-- Button trigger modal -->
+
+  <!-- Modal -->
+  <div class="modal fade" *ngIf="nmbrParticipant.valid" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="exampleModalLabel" style="text-align:center;color: #E26E02;font-size: xx-large">Liste des participants réussi</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <table class="table">
+            <thead>
+            <tr>
+              <th scope="col">#ID</th>
+              <th scope="col">No passport</th>
+              <th scope="col">Prénom & Nom</th>
+              <th scope="col">Nb participation</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let item of itemsPelerin">
+              <th>{{ item.id }}</th>
+              <td>{{ item.numPassport }}</td>
+              <td>{{ item.firstName}} {{item.familyName}}</td>
+              <td>{{ item.nbInscription}}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn"style="background-color: #047323;color: white; ">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" *ngIf="nmbrfiltrage.valid && age.valid" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="exampleModalLabel" style="text-align:center;color: #E26E02;font-size: xx-large">Liste des participants réussi</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <table class="table">
+            <thead>
+            <tr>
+              <th scope="col">#ID</th>
+              <th scope="col">No passport</th>
+              <th scope="col">Prénom & Nom</th>
+              <th scope="col">Nb participation</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let item of itemsPelerin">
+              <th>{{ item.id }}</th>
+              <td>{{ item.numPassport }}</td>
+              <td>{{ item.firstName}} {{item.familyName}}</td>
+              <td>{{ item.nbInscription}}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn"style="background-color: #047323;color: white; ">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

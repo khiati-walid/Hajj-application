@@ -1,0 +1,20 @@
+<h2 style="text-align: center;">Infos de l'hôtel</h2>
+<hr/>
+<div *ngIf="hotel" style="margin-left: auto;margin-right: auto;">
+    <div>
+        <label><b>Nom de l'hôtel</b></label> {{hotel.nomHotel}}
+    </div>
+    <div>
+        <label><b>Localisation </b></label> {{hotel.localisation}}
+    </div>
+    <div>
+        <label><b>Adresse</b></label> {{hotel.adresse}}
+    </div>
+    <div>
+        <label><b>Capacite</b></label> {{hotel.capacite}}
+    </div>
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Retour à la liste des hôtels</button><br>

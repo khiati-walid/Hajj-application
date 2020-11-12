@@ -1,0 +1,20 @@
+<h1>Reservation de Vol</h1>
+<br>
+<select name=branch class="form-control form-white username" id="branch" (change)="selectchangehandler 
+($event)">
+  <option selected> choisissez la ville d'arrivée   </option>
+  <option (click)='reloadData()' value='elmadina'> elmadina </option>
+  <option (click)='reloadData()' value='makkah'> makkah </option>
+</select>
+<br>
+<button (click)='reloadData()'> get vols</button>
+<div>
+    <img src="../../assets/img/makkah.png" />
+</div>
+<br><br><br><br>
+
+<div class="div1" *ngFor="let customer of customers | async" style="width: 300px;">
+    <vol-details [customer]='customer '></vol-details>
+
+</div>
+<div class="div1" *ngFor="let customer of customers"></div>

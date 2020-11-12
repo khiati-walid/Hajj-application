@@ -1,0 +1,33 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Liste des hôtels</h2>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th class="hide">Id Hotel</th>
+        <th>Nom de l'hôtel</th>
+        <th>Ville</th>
+        <th>Adresse</th>
+        <th>Capacité</th>
+        <th>Actions</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let hotel of hotels|async">
+        <td class="hide">{{hotel.id_hotel}}</td>
+        <td>{{hotel.nomHotel}}</td>
+        <td>{{hotel.localisation}}</td>
+        <td>{{hotel.adresse}}</td>
+        <td>{{hotel.capacite}}</td>
+        <td>
+          <button (click)="removeHotel(hotel.id_hotel)" class="btn btn-danger">Delete</button>
+          <button (click)="modifyHotel(hotel.id_hotel)" class="btn btn-info" style="margin-left: 10px">Update</button>
+          <button (click)="hotelDetails(hotel.id_hotel)" class="btn btn-info" style="margin-left: 10px">Details</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

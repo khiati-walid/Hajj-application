@@ -1,0 +1,18 @@
+.tirage_btn {
+  width: 25%;
+  display: block;
+  margin : auto;
+  background: #E26F05;
+  color: white !important;
+  border-radius: 50px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  font-size: x-large;
+
+}
+.inputcss{
+  width: 30%;
+  color: #E26F05;
+  font-size: large;
+  font-weight: bold;
+}
+

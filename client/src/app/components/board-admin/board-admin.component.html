@@ -1,0 +1,74 @@
+<div id="wrapper">
+    <div class="overlay"></div>
+
+    <!-- Sidebar -->
+    <nav class="navbar navbar-inverse fixed-top" id="sidebar-wrapper" role="navigation">
+        <ul class="nav sidebar-nav" list-style-type=none>
+            <div class="sidebar-header">
+                <div class="sidebar-brand">
+                    <a href="#"><img src="{{stat}}" class="stateImg" /></a>
+                </div>
+            </div>
+            <br>
+
+            <li>
+                <a href="/admin"><img src="assets/dash.svg" style="width: 10%"> dashboard</a>
+
+            </li>
+            <li>
+                <a routerLink="/tirage"><img src="assets/participant.svg" style="width: 10%"> Liste participants</a>
+            </li>
+            <li>
+                <a routerLink="/voll"><img src="assets/participant.svg" style="width: 10%"> Ajouter un vol</a>
+            </li>
+            <li>
+                <a routerLink="/addhotel"><img src="assets/participant.svg" style="width: 10%"> Ajouter un hotel</a>
+            </li>
+            <li>
+                <a routerLink="/pellerins"><img src="assets/participant.svg" style="width: 10%"> liste des pelerins</a>
+            </li>
+            <li>
+                <a routerLink="/hotels"><img src="assets/participant.svg" style="width: 10%"> liste des hotels</a>
+            </li>
+            <div style="padding: 20px;">
+
+
+
+
+
+
+            </div>
+
+        </ul>
+    </nav>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+        <button type="button" class="hamburger animated fadeInLeft is-closed" data-toggle="offcanvas">
+      <span class="hamb-top"></span>
+      <span class="hamb-middle"></span>
+      <span class="hamb-bottom"></span>
+    </button>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h1>dashboard Admin</h1>
+                    <div class="btn1">
+                        <a routerLink="/tirage" class="btn cssbtn">Voir la liste des participants</a>
+
+                        <a routerLink="/add" class="btn cssbtn">Ajouter vol</a>
+                        <a routerLink="/addhotel" class="btn cssbtn">Ajouter un hotel</a>
+
+                        <a routerLink="/voll" class="btn cssbtn">listes des vols</a>
+                        <a routerLink="/pellerins" class="btn cssbtn">liste des pelerins</a>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- /#page-content-wrapper -->
+        </div>
+
+    </div>

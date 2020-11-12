@@ -1,0 +1,54 @@
+<h1 style="text-align: center;">Ajouter un hôtel</h1>
+<div [hidden]="submitted" style="width: 400px; margin-left: auto; margin-right: auto;">
+  <form (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+      <input #id_hotel="ngModel" [(ngModel)]="hotel.id_hotel" name="id_hotel" type="hidden">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Nom de l'hôtel</label>
+      <input type="text" placeholder="Nom de l'hôtel" #nomHotel="ngModel"
+             [class.is-invalid]="nomHotel.invalid && nomHotel.touched"
+             class="form-control" id="nomHotel" required [(ngModel)]="hotel.nomHotel" name="nomHotels">
+      <small class="text-danger" [class.d-none]="nomHotel.valid || nomHotel.untouched">
+        Nom de l'hôtel est requis</small>
+    </div>
+
+    <div class="form-group">
+      <label for="name">Ville</label>
+      <input type="text" placeholder="Ville" #localisation="ngModel"
+             [class.is-invalid]="localisation.invalid && localisation.touched"
+             class="form-control" id="localisation" required [(ngModel)]="hotel.localisation" name="localisation">
+      <small class="text-danger" [class.d-none]="localisation.valid || localisation.untouched">
+        La ville de l'hôtel est requise
+      </small>
+    </div>
+
+    <div class="form-group">
+      <label for="name">Adresse</label>
+      <input type="text" placeholder="Adresse" #adresse="ngModel"
+             [class.is-invalid]="adresse.invalid && adresse.touched"
+             class="form-control" id="adresse" required [(ngModel)]="hotel.adresse" name="adresse">
+      <small class="text-danger" [class.d-none]="adresse.valid || adresse.untouched">
+        L'adresse de l'hôtel est requise
+      </small>
+    </div>
+
+    <div class="form-group">
+      <label for="name">Capacité</label>
+      <input type="text" placeholder="Capacité maximale" #capacite="ngModel"
+             [class.is-invalid]="capacite.invalid && capacite.touched"
+             class="form-control" id="capacite" required [(ngModel)]="hotel.capacite" name="capacite">
+      <small class="text-danger" [class.d-none]="capacite.valid || capacite.untouched">Capacité est requise
+      </small>
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>Avec succès!</h4>
+  <!--<button class="btn btn-success" (click)="newFlight()">Add</button>-->
+</div>

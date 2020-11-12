@@ -1,0 +1,36 @@
+.div2 {
+    border: 3px solid rgb(255, 132, 17);
+    border-radius: 50px 20px;
+    width: 110%;
+    display: flex;
+    flex-direction: row;
+}
+
+p {
+    padding-left: 30px;
+}
+
+p,
+.btn1 {
+    display: inline-block;
+}
+
+.div3 {
+    margin-left: 20px;
+    background-color: antiquewhite;
+    padding-left: 20px;
+    border-radius: 50px 20px;
+    padding-top: 20px;
+}
+
+.btn1 {
+    background-color: coral;
+    margin-left: 150px;
+    margin-bottom: 20px;
+    margin-top: 0px;
+}
+
+.btn2 {
+    background-color: forestgreen;
+    margin-left: 70px;
+}

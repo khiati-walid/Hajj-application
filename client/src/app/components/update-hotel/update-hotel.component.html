@@ -1,0 +1,28 @@
+
+<h3 style="text-align: center;">Mettre à jour un hôtel</h3>
+<div class="container" style="width: 400px;margin-left: auto;margin-right: auto;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Id Hotel</label>
+      <input [disabled]="true" type="text" class="form-control" id="id_hotel" required [(ngModel)]="hotel.id_hotel"
+             name="id_hotel">
+    </div>
+    <div class="form-group">
+      <label for="name">Nom de l'hôtel</label>
+      <input [disabled]="true" type="text" class="form-control" id="nomHotel" required [(ngModel)]="hotel.nomHotel" name="nomHotel">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Ville</label>
+      <input type="text" class="form-control" id="localisation" required [(ngModel)]="hotel.localisation"
+             name="localisation">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Capacite</label>
+      <input type="text" class="form-control" id="capacite" required [(ngModel)]="hotel.capacite" name="capacite">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>

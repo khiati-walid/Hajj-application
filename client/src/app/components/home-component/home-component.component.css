@@ -1,0 +1,38 @@
+.hajImg{
+
+  margin-top:1%;
+  text-align:center;
+}
+
+@media (max-width: 1200px) {
+  .first-container {
+    margin-bottom: 70px;
+  }
+
+  .first-container .btn {
+    position: absolute;
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    margin-left: unset !important;
+  }
+
+}
+
+@media (min-width: 992px) {
+  .last-card .card-body {
+    max-height: 76px;
+  }
+}
+.footerDes{
+  color:#6A6767;
+  text-align: center;
+  font-weight: 600;
+
+}
+.footerLinks{
+  flex-direction: row;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
